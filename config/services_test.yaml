@@ -4,6 +4,12 @@ services:
         autoconfigure: true
         public: true
 
+    Radarlog\S3Uploader\Tests\Infrastructure\MySql\InMemoryDb: ~
+
+    Radarlog\S3Uploader\Domain\Repository: '@Radarlog\S3Uploader\Tests\Infrastructure\MySql\InMemoryDb'
+    Radarlog\S3Uploader\Application\Query\Image\FindAll: '@Radarlog\S3Uploader\Tests\Infrastructure\MySql\InMemoryDb'
+    Radarlog\S3Uploader\Application\Query\Image\FindOne: '@Radarlog\S3Uploader\Tests\Infrastructure\MySql\InMemoryDb'
+
     test.repository: '@Radarlog\S3Uploader\Domain\Repository'
     test.query.all: '@Radarlog\S3Uploader\Application\Query\Image\FindAll'
     test.query.one: '@Radarlog\S3Uploader\Application\Query\Image\FindOne'

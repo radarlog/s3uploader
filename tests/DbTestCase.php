@@ -3,25 +3,18 @@ declare(strict_types=1);
 
 namespace Radarlog\S3Uploader\Tests;
 
-use Radarlog\S3Uploader\Infrastructure\MySql\Connection;
+use Radarlog\S3Uploader\Tests\Infrastructure\MySql\InMemoryDb;
 
 class DbTestCase extends FunctionalTestCase
 {
-    /** @var Connection */
-    private $connection;
-
     protected function setUp(): void
     {
         parent::setUp();
-
-        $this->connection = self::$container->get(Connection::class);
-
-        $this->connection->beginTransaction();
     }
 
     protected function tearDown(): void
     {
-        $this->connection->rollBack();
+        self::$container->get(InMemoryDb::class)->reset();
 
         parent::tearDown();
     }
