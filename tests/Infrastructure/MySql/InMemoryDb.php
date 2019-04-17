@@ -58,9 +58,4 @@ final class InMemoryDb implements Domain\Repository, Query\Image\FindAll, Query\
             ? new Query\Image\HashName($this->rows[$uuid]['hash'], $this->rows[$uuid]['name'])
             : null;
     }
-
-    public function reset(): void
-    {
-        $this->rows = [];
-    }
 }

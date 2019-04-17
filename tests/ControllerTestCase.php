@@ -5,7 +5,7 @@ namespace Radarlog\S3Uploader\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Client;
 
-class ControllerTestCase extends DbTestCase
+class ControllerTestCase extends FunctionalTestCase
 {
     /** @var Client */
     protected $client;

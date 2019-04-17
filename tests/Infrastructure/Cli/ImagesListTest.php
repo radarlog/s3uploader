@@ -5,11 +5,11 @@ namespace Radarlog\S3Uploader\Tests\Infrastructure\Cli;
 
 use Radarlog\S3Uploader\Domain\Image;
 use Radarlog\S3Uploader\Domain\Repository;
-use Radarlog\S3Uploader\Tests\DbTestCase;
+use Radarlog\S3Uploader\Tests\FunctionalTestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
-class ImagesListTest extends DbTestCase
+class ImagesListTest extends FunctionalTestCase
 {
     /** @var Repository */
     private $repository;

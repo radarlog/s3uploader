@@ -6,9 +6,9 @@ namespace Radarlog\S3Uploader\Tests\Infrastructure\MySql\Read;
 use Radarlog\S3Uploader\Application\Query;
 use Radarlog\S3Uploader\Domain\Image;
 use Radarlog\S3Uploader\Domain\Repository;
-use Radarlog\S3Uploader\Tests\DbTestCase;
+use Radarlog\S3Uploader\Tests\FunctionalTestCase;
 
-class FindAllImagesTest extends DbTestCase
+class FindAllImagesTest extends FunctionalTestCase
 {
     protected function setUp(): void
     {
