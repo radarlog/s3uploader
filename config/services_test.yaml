@@ -13,3 +13,5 @@ services:
     test.repository: '@Radarlog\S3Uploader\Domain\Repository'
     test.query.all: '@Radarlog\S3Uploader\Application\Query\Image\FindAll'
     test.query.one: '@Radarlog\S3Uploader\Application\Query\Image\FindOne'
+
+    test.repository.mysql: '@Radarlog\S3Uploader\Infrastructure\MySql\PersistenceRepository'
