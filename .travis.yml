@@ -60,4 +60,4 @@ script:
     - vendor/bin/phpunit -d pcov.enabled=1 --coverage-clover var/cache/clover.xml
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -f var/cache/clover.xml
