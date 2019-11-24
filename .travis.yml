@@ -60,5 +60,4 @@ script:
     - vendor/bin/phpunit -d pcov.enabled=1 --coverage-clover var/cache/clover.xml
 
 after_success:
-    - travis_retry wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar
-    - travis_retry php php-coveralls.phar -e test -x var/cache/clover.xml -o var/cache/coveralls.json
+    - bash <(curl -s https://codecov.io/bash)
