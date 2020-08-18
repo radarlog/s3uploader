@@ -59,7 +59,7 @@ install:
 
 before_script:
     - bin/console migrations:migrate --ansi --no-interaction
-    - yarn dev
+    - yarn dev-server --host 0.0.0.0 --port 8765 --public localhost:80
 
 script:
     - yarn lint
