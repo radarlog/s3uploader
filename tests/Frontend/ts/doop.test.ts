@@ -2,7 +2,7 @@ import $ from 'jquery';
 import fetch from 'node-fetch';
 
 describe('Doop Test Suite', () => {
-    const url = 'http://localhost';
+    const url = process.env.TRAVIS_APP_HOST as string;
 
     async function loadHtml() {
         const response = await fetch(url);
