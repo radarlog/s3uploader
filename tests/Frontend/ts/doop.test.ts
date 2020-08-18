@@ -7,11 +7,17 @@ describe('Doop Test Suite', () => {
     async function loadHtml() {
         const response = await fetch(url);
 
+        console.log(url);
+
         return response.text();
     }
 
     test('Upload file input has been rendered', async () => {
-        document.documentElement.innerHTML = await loadHtml();
+        const html = await loadHtml()
+
+        console.log(html);
+
+        document.documentElement.innerHTML = html;
 
         expect($('#upload_image').hasClass('custom-file-input')).toBeTruthy();
     });
